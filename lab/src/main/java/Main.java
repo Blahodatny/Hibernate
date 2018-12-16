@@ -37,7 +37,8 @@ class Main {
                     .map(entityName -> session.createQuery("from " + entityName))
                     .forEach(query -> {
                         System.out.println("executing: " + query.getQueryString());
-                        for (var o : query.list()) System.out.println("  " + o);
+                        for (var o : query.list())
+                            System.out.println("  " + o);
                     });
         }
     }
