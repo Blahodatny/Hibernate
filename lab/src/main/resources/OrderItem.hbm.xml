@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="retail.OrderItem" table="order_items" schema="public" catalog="Retail_Service">
+        <id name="itemId">
+            <column name="item_id" sql-type="integer"/>
+        </id>
+        <property name="quantity">
+            <column name="quantity" sql-type="integer"/>
+        </property>
+        <many-to-one name="ordersByOrderNumber" class="retail.Order">
+            <column name="order_number"/>
+        </many-to-one>
+        <many-to-one name="productsByProductId" class="retail.Product">
+            <column name="product_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
