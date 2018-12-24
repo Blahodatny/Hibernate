@@ -1,3 +1,5 @@
+package project;
+
 import org.hibernate.HibernateException;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -9,15 +11,15 @@ class Main {
 
     static {
         // A SessionFactory is set up once for an application!
-        final var registry = new StandardServiceRegistryBuilder()
+        final var REGISTRY = new StandardServiceRegistryBuilder()
                 .configure()
                 // configures settings from hibernate.cfg.xml
                 .build();
         try {
-            SESSION_FACTORY = new MetadataSources(registry)
+            SESSION_FACTORY = new MetadataSources(REGISTRY)
                     .buildMetadata().buildSessionFactory();
         } catch (HibernateException ex) {
-            StandardServiceRegistryBuilder.destroy(registry);
+            StandardServiceRegistryBuilder.destroy(REGISTRY);
             throw new ExceptionInInitializerError(ex);
         }
     }
@@ -29,8 +31,9 @@ class Main {
     public static void main(final String[] args) {
         try (var session = getSession()) {
             System.out.println("querying all the managed entities...");
-            final var metaModel = session.getSessionFactory().getMetamodel();
-            metaModel
+            session
+                    .getSessionFactory()
+                    .getMetamodel()
                     .getEntities()
                     .stream()
                     .map(EntityType::getName)

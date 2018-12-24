@@ -1,4 +1,4 @@
-package retail;
+package project.retail;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;

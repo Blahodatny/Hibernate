@@ -1,4 +1,4 @@
-package retail;
+package project.retail;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
