@@ -25,4 +25,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-SELECT for_loop_through_dyn_query(2, 5)
+SELECT for_loop_through_dyn_query(2, 5);
+
+DROP FUNCTION IF EXISTS for_loop_through_dyn_query(sort_type INTEGER, n INTEGER)

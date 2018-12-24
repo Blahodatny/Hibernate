@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca1d2a35-d694-40c1-9e5f-a19648a7bc23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/d_blahodatnyi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hibernate.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/sql/procedure.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/sql/trigger.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ceca6019-90bf-4a0a-a137-c6792dace35b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ceca6019-90bf-4a0a-a137-c6792dace35b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ceca6019-90bf-4a0a-a137-c6792dace35b/storage_v2/_src_/database/Retail_Service.eQ_tfg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ceca6019-90bf-4a0a-a137-c6792dace35b/storage_v2/_src_/database/Retail_Service.eQ_tfg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ceca6019-90bf-4a0a-a137-c6792dace35b/storage_v2/_src_/database/Retail_Service.eQ_tfg/schema/public.abK9xQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ceca6019-90bf-4a0a-a137-c6792dace35b/storage_v2/_src_/database/Retail_Service.eQ_tfg/schema/public.abK9xQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/retail/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/retail/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/retail/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/retail/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/retail/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/retail/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/retail/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/retail/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Customer.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Customer.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Order.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Order.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/OrderItem.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/OrderItem.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Product.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Product.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/sql/procedure.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/sql/procedure.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="868">
-              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            <state relative-caret-position="493">
+              <caret line="19" column="59" lean-forward="true" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,19 +51,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/sql/trigger.sql">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/sql/procedure.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="45">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/sql/procedure.sql">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/sql/trigger.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="-14">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -98,6 +80,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Dimon &lt;dbrlmola82@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
@@ -117,6 +104,7 @@
         <option value="$PROJECT_DIR$/src/main/java/project/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/sql/trigger.sql" />
         <option value="$PROJECT_DIR$/src/main/java/project/sql/procedure.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/project/task3/task.txt" />
       </list>
     </option>
   </component>
@@ -184,6 +172,15 @@
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="task3" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -195,7 +192,7 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="ceca6019-90bf-4a0a-a137-c6792dace35b" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545675499975" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545676658183" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -256,17 +253,26 @@
       <updated>1544988261437</updated>
       <workItem from="1544988264248" duration="2503000" />
       <workItem from="1544991613962" duration="859000" />
-      <workItem from="1545660152522" duration="13256000" />
+      <workItem from="1545660152522" duration="14705000" />
     </task>
+    <task id="LOCAL-00001" summary="2-nd task is ready">
+      <created>1545675506414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545675506414</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16618000" />
+    <option name="totallyTimeSpent" value="18067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14994664" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14994664" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -277,7 +283,7 @@
       <window_info anchor="bottom" id="Database Console" weight="0.32937366" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32181427" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29049677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -286,7 +292,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Tool Output" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32937366" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="SQL" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -341,6 +347,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2-nd task is ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="2-nd task is ready" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/project/retail/OrderItem.java">
@@ -432,27 +442,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/task3/task.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/sql/trigger.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        <state relative-caret-position="-14">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/sql/procedure.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="19" column="59" lean-forward="true" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
