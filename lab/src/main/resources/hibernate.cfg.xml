@@ -11,13 +11,13 @@
 
         <!-- DB schema will be updated if needed -->
         <property name="hbm2ddl.auto">update</property>
-        <mapping class="project.retail.Customer"/>
+        <mapping class="retail.Customer"/>
         <mapping resource="Customer.hbm.xml"/>
-        <mapping class="project.retail.OrderItem"/>
+        <mapping class="retail.OrderItem"/>
         <mapping resource="OrderItem.hbm.xml"/>
         <mapping resource="Order.hbm.xml"/>
-        <mapping class="project.retail.Order"/>
-        <mapping class="project.retail.Product"/>
+        <mapping class="retail.Order"/>
+        <mapping class="retail.Product"/>
         <mapping resource="Product.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

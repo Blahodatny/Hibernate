@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="project.retail.Product" table="products" schema="public" catalog="Retail_Service">
+    <class name="retail.Product" table="products" schema="public" catalog="Retail_Service">
         <id name="productId">
             <column name="product_id" sql-type="varchar(20)" length="20"/>
         </id>
