@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+group 'com.project'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.0.Final'
+}
