@@ -1,6 +1,7 @@
 import org.hibernate.HibernateException;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import retail.Customer;
 
 import javax.persistence.metamodel.EntityType;
 
@@ -41,6 +42,16 @@ class Main {
                         for (var o : query.list())
                             System.out.println("  " + o);
                     });
+            var tx = session.beginTransaction();
+            session.save(new Customer(
+                    "+380-98-456-43-54",
+                    "Dima",
+                    "Pochta",
+                    "Vasila St.",
+                    "Warsaw"
+            ));
+            tx.commit();
+            session.close();
         }
     }
 }

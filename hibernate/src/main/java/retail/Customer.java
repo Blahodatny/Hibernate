@@ -13,6 +13,17 @@ public class Customer {
     private String street;
     private String city;
 
+    public Customer(String phone, String firstName, String lastName, String street, String city) {
+        this.phone = phone;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.street = street;
+        this.city = city;
+    }
+
+    public Customer() {
+    }
+
     @javax.persistence.Id
     @Column(name = "phone", nullable = false, length = 20)
     public String getPhone() {
