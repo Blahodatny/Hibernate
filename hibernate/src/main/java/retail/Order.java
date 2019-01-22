@@ -13,7 +13,6 @@ public class Order {
     private Timestamp shipDate;
     private Customer customersByPhone;
 
-
     @Id
     @Column(name = "order_number", nullable = false)
     public int getOrderNumber() {
