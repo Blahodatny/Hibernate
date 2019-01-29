@@ -1,17 +1,20 @@
 package retail;
 
-import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
 import javax.persistence.Column;
+import javax.persistence.Basic;
 import java.util.Objects;
 
-@javax.persistence.Entity
-@javax.persistence.Table(name = "products", schema = "public", catalog = "Retail_Service")
+@Entity
+@Table(name = "products", schema = "public", catalog = "Retail_Service")
 public class Product {
     private String productId;
     private String productType;
     private boolean _new;
 
-    @javax.persistence.Id
+    @Id
     @Column(name = "product_id", nullable = false, length = 20)
     public String getProductId() {
         return productId;

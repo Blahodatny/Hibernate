@@ -1,4 +1,5 @@
 import org.hibernate.HibernateException;
+import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import retail.Customer;
@@ -6,7 +7,7 @@ import retail.Customer;
 import javax.persistence.metamodel.EntityType;
 
 class Main {
-    private static final org.hibernate.SessionFactory SESSION_FACTORY;
+    private static final SessionFactory SESSION_FACTORY;
 
     static {
         // A SessionFactory is set up once for an application!

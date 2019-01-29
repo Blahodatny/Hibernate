@@ -1,11 +1,14 @@
 package retail;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.Basic;
 import java.util.Objects;
 
-@javax.persistence.Entity
-@javax.persistence.Table(name = "customers", schema = "public", catalog = "Retail_Service")
+@Entity
+@Table(name = "customers", schema = "public", catalog = "Retail_Service")
 public class Customer {
     private String phone;
     private String firstName;
@@ -24,7 +27,7 @@ public class Customer {
     public Customer() {
     }
 
-    @javax.persistence.Id
+    @Id
     @Column(name = "phone", nullable = false, length = 20)
     public String getPhone() {
         return phone;
