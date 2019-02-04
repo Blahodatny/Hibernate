@@ -24,12 +24,8 @@ class Main {
         }
     }
 
-    private static org.hibernate.Session getSession() throws HibernateException {
-        return SESSION_FACTORY.openSession();
-    }
-
     public static void main(final String[] args) {
-        try (var session = getSession()) {
+        try (var session = SESSION_FACTORY.openSession()) {
             System.out.println("querying all the managed entities...");
             session
                     .getSessionFactory()
