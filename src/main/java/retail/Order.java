@@ -1,36 +1,39 @@
 package retail;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.Column;
-import javax.persistence.Basic;
-import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
 import java.sql.Timestamp;
+import java.util.Collection;
 import java.util.Objects;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "orders", schema = "public", catalog = "Retail_Service")
 public class Order {
-    private int orderNumber;
+    private Long id;
     private String toStreet;
     private String toCity;
     private Timestamp shipDate;
+    private Collection<OrderItem> orderItemsById;
     private Customer customersByPhone;
 
     @Id
-    @Column(name = "order_number", nullable = false)
-    public int getOrderNumber() {
-        return orderNumber;
+    @Column(name = "id", nullable = false)
+    public Long getId() {
+        return id;
     }
 
-    public void setOrderNumber(int orderNumber) {
-        this.orderNumber = orderNumber;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Basic
-    @Column(name = "toStreet", nullable = false, length = -1)
+    @Column(name = "to_street", nullable = false, length = -1)
     public String getToStreet() {
         return toStreet;
     }
@@ -40,7 +43,7 @@ public class Order {
     }
 
     @Basic
-    @Column(name = "toCity", nullable = false, length = -1)
+    @Column(name = "to_city", nullable = false, length = -1)
     public String getToCity() {
         return toCity;
     }
@@ -50,7 +53,7 @@ public class Order {
     }
 
     @Basic
-    @Column(name = "shipDate", nullable = false)
+    @Column(name = "ship_date", nullable = false)
     public Timestamp getShipDate() {
         return shipDate;
     }
@@ -63,24 +66,32 @@ public class Order {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         var order = (Order) o;
-        return orderNumber == order.orderNumber &&
+        return Objects.equals(id, order.id) &&
                 Objects.equals(toStreet, order.toStreet) &&
                 Objects.equals(toCity, order.toCity) &&
                 Objects.equals(shipDate, order.shipDate);
     }
 
     public int hashCode() {
-        return Objects.hash(orderNumber, toStreet, toCity, shipDate);
+        return Objects.hash(id, toStreet, toCity, shipDate);
     }
 
     public String toString() {
         return "Order{" +
-                "orderNumber=" + orderNumber +
+                "id=" + id +
                 ", toStreet='" + toStreet + '\'' +
                 ", toCity='" + toCity + '\'' +
                 ", shipDate=" + shipDate +
-                ", customersByPhone=" + customersByPhone +
                 '}';
+    }
+
+    @OneToMany(mappedBy = "orderByOrderId")
+    public Collection<OrderItem> getOrderItemsById() {
+        return orderItemsById;
+    }
+
+    public void setOrderItemsById(Collection<OrderItem> orderItemsById) {
+        this.orderItemsById = orderItemsById;
     }
 
     @ManyToOne

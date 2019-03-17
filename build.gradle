@@ -1,4 +1,7 @@
-apply plugin: 'java'
+plugins {
+    id 'java'
+    id 'com.gradle.build-scan' version '2.1'
+}
 
 group 'com.project'
 version '1.0-SNAPSHOT'
@@ -7,6 +10,11 @@ sourceCompatibility = 11
 
 repositories {
     mavenCentral()
+}
+
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
 }
 
 dependencies {

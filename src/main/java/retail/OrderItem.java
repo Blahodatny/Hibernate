@@ -1,31 +1,30 @@
 package retail;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.Column;
-import javax.persistence.Basic;
-import javax.persistence.ManyToOne;
-import javax.persistence.ManyToMany;
-import javax.persistence.JoinColumn;
 import java.util.Objects;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "order_items", schema = "public", catalog = "Retail_Service")
 public class OrderItem {
-    private int itemId;
+    private Long id;
     private int quantity;
-    private Order ordersByOrderNumber;
-    private Product productsByProductId;
+    private Order orderByOrderId;
+    private Product productByProductId;
 
     @Id
-    @Column(name = "item_id", nullable = false)
-    public int getItemId() {
-        return itemId;
+    @Column(name = "id", nullable = false)
+    public Long getId() {
+        return id;
     }
 
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Basic
@@ -42,40 +41,39 @@ public class OrderItem {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         var orderItem = (OrderItem) o;
-        return itemId == orderItem.itemId &&
+        return Objects.equals(id, orderItem.id) &&
                 quantity == orderItem.quantity;
     }
 
     public int hashCode() {
-        return Objects.hash(itemId, quantity);
+        return Objects.hash(id, quantity);
     }
 
     public String toString() {
         return "OrderItem{" +
-                "itemId=" + itemId +
+                "id=" + id +
                 ", quantity=" + quantity +
-                ", ordersByOrderNumber=" + ordersByOrderNumber +
-                ", productsByProductId=" + productsByProductId +
+                ", productByProductId=" + productByProductId +
                 '}';
     }
 
     @ManyToOne
-    @JoinColumn(name = "order_number", referencedColumnName = "order_number", nullable = false)
-    public Order getOrdersByOrderNumber() {
-        return ordersByOrderNumber;
+    @JoinColumn(name = "order_id", referencedColumnName = "id", nullable = false)
+    public Order getOrderByOrderId() {
+        return orderByOrderId;
     }
 
-    public void setOrdersByOrderNumber(Order ordersByOrderNumber) {
-        this.ordersByOrderNumber = ordersByOrderNumber;
+    public void setOrderByOrderId(Order orderByOrderId) {
+        this.orderByOrderId = orderByOrderId;
     }
 
-    @ManyToMany
-    @JoinColumn(name = "product_id", referencedColumnName = "product_id", nullable = false)
-    public Product getProductsByProductId() {
-        return productsByProductId;
+    @ManyToOne
+    @JoinColumn(name = "product_id", referencedColumnName = "id", nullable = false)
+    public Product getProductByProductId() {
+        return productByProductId;
     }
 
-    public void setProductsByProductId(Product productsByProductId) {
-        this.productsByProductId = productsByProductId;
+    public void setProductByProductId(Product productByProductId) {
+        this.productByProductId = productByProductId;
     }
 }

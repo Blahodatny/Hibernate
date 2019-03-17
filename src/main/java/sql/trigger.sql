@@ -3,15 +3,15 @@ CREATE OR REPLACE FUNCTION update_order_item()
 $$
 DECLARE
   curs CURSOR FOR SELECT *
-                  FROM order_items
-                  WHERE order_number = NEW.order_number;
+                  FROM ORDER_ITEMS
+                  WHERE Order_Id = NEW.Order_Id;
 BEGIN
   FOR r IN curs
     LOOP
-      IF r.product_id = NEW.product_id THEN
-        UPDATE order_items
-        SET quantity = quantity + NEW.quantity
-        WHERE item_id = r.item_id;
+      IF r.Product_Id = NEW.Product_Id THEN
+        UPDATE ORDER_ITEMS
+        SET Quantity = Quantity + NEW.Quantity
+        WHERE Id = r.Id;
 
         RETURN NULL;
       END IF;
@@ -22,12 +22,12 @@ $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER update_quantity
   BEFORE INSERT
-  ON order_items
+  ON ORDER_ITEMS
   FOR EACH ROW
 EXECUTE PROCEDURE update_order_item();
 
-INSERT INTO order_items (Order_number, Product_ID, Quantity)
+INSERT INTO order_items (Order_Id, Product_Id, Quantity)
 VALUES (1, 'BMW', 67);
 
-DROP TRIGGER IF EXISTS update_quantity ON order_items;
+DROP TRIGGER IF EXISTS update_quantity ON ORDER_ITEMS;
 DROP FUNCTION IF EXISTS update_order_item()

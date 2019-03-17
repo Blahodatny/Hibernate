@@ -3,15 +3,22 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="retail.Product" table="products" schema="public" catalog="Retail_Service">
-        <id name="productId">
-            <column name="product_id" sql-type="varchar(20)" length="20"/>
+    <class name="retail.Product" table="products" schema="public"
+           catalog="Retail_Service">
+        <id name="id">
+            <column name="id" sql-type="varchar(20)" length="20"/>
         </id>
-        <property name="productType">
-            <column name="productType" sql-type="text"/>
+        <property name="type">
+            <column name="type" sql-type="text"/>
         </property>
-        <property name="_new">
-            <column name="isNew" sql-type="boolean"/>
+        <property name="secondHand">
+            <column name="second_hand" sql-type="boolean"/>
         </property>
+        <set name="orderItemsById" inverse="true">
+            <key>
+                <column name="product_id"/>
+            </key>
+            <one-to-many not-found="ignore" class="retail.OrderItem"/>
+        </set>
     </class>
 </hibernate-mapping>

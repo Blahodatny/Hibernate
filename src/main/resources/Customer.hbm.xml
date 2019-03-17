@@ -3,15 +3,16 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="retail.Customer" table="customers" schema="public" catalog="Retail_Service">
+    <class name="retail.Customer" table="customers" schema="public"
+           catalog="Retail_Service">
         <id name="phone">
             <column name="phone" sql-type="varchar(20)" length="20"/>
         </id>
         <property name="firstName">
-            <column name="firstName" sql-type="varchar(20)" length="20"/>
+            <column name="first_name" sql-type="varchar(20)" length="20"/>
         </property>
         <property name="lastName">
-            <column name="lastName" sql-type="varchar(20)" length="20"/>
+            <column name="last_name" sql-type="varchar(20)" length="20"/>
         </property>
         <property name="street">
             <column name="street" sql-type="text" not-null="true"/>
@@ -19,5 +20,11 @@
         <property name="city">
             <column name="city" sql-type="text"/>
         </property>
+        <set name="ordersByPhone" inverse="true">
+            <key>
+                <column name="phone"/>
+            </key>
+            <one-to-many not-found="ignore" class="retail.Order"/>
+        </set>
     </class>
 </hibernate-mapping>

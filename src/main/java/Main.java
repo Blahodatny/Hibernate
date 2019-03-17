@@ -1,10 +1,8 @@
+import javax.persistence.metamodel.EntityType;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import retail.Customer;
-
-import javax.persistence.metamodel.EntityType;
 
 class Main {
     private static final SessionFactory SESSION_FACTORY;
@@ -40,13 +38,13 @@ class Main {
                             System.out.println("  " + o);
                     });
             var tx = session.beginTransaction();
-            session.save(new Customer(
-                    "+380-98-456-43-54",
-                    "Dima",
-                    "Pochta",
-                    "Vasila St.",
-                    "Warsaw"
-            ));
+//            session.save(new Customer(
+//                    "+380-98-456-43-54",
+//                    "Dima",
+//                    "Pochta",
+//                    "Vasila St.",
+//                    "Warsaw"
+//            ));
             tx.commit();
             session.close();
         }

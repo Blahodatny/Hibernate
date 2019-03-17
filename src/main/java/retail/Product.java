@@ -1,67 +1,79 @@
 package retail;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.Column;
-import javax.persistence.Basic;
+import java.util.Collection;
 import java.util.Objects;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "products", schema = "public", catalog = "Retail_Service")
 public class Product {
-    private String productId;
-    private String productType;
-    private boolean _new;
+    private String id;
+    private String type;
+    private boolean secondHand;
+    private Collection<OrderItem> orderItemsById;
 
     @Id
-    @Column(name = "product_id", nullable = false, length = 20)
-    public String getProductId() {
-        return productId;
+    @Column(name = "id", nullable = false, length = 20)
+    public String getId() {
+        return id;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
-
-    @Basic
-    @Column(name = "productType", nullable = false, length = -1)
-    public String getProductType() {
-        return productType;
-    }
-
-    public void setProductType(String productType) {
-        this.productType = productType;
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Basic
-    @Column(name = "isNew", nullable = false)
-    public boolean is_new() {
-        return _new;
+    @Column(name = "type", nullable = false, length = -1)
+    public String getType() {
+        return type;
     }
 
-    public void set_new(boolean _new) {
-        this._new = _new;
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @Basic
+    @Column(name = "second_hand", nullable = false)
+    public boolean isSecondHand() {
+        return secondHand;
+    }
+
+    public void setSecondHand(boolean secondHand) {
+        this.secondHand = secondHand;
     }
 
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         var product = (Product) o;
-        return _new == product._new &&
-                Objects.equals(productId, product.productId) &&
-                Objects.equals(productType, product.productType);
+        return secondHand == product.secondHand &&
+                Objects.equals(id, product.id) &&
+                Objects.equals(type, product.type);
     }
 
     public int hashCode() {
-        return Objects.hash(productId, productType, _new);
+        return Objects.hash(id, type, secondHand);
     }
 
     public String toString() {
         return "Product{" +
-                "productId='" + productId + '\'' +
-                ", productType='" + productType + '\'' +
-                ", _new=" + _new +
+                "id='" + id + '\'' +
+                ", type='" + type + '\'' +
+                ", secondHand=" + secondHand +
                 '}';
+    }
+
+    @OneToMany(mappedBy = "productByProductId")
+    public Collection<OrderItem> getOrderItemsById() {
+        return orderItemsById;
+    }
+
+    public void setOrderItemsById(Collection<OrderItem> orderItemsById) {
+        this.orderItemsById = orderItemsById;
     }
 }

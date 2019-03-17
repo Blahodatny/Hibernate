@@ -1,11 +1,13 @@
 package retail;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.Column;
-import javax.persistence.Basic;
+import java.util.Collection;
 import java.util.Objects;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "customers", schema = "public", catalog = "Retail_Service")
@@ -15,16 +17,19 @@ public class Customer {
     private String lastName;
     private String street;
     private String city;
+    private Collection<Order> ordersByPhone;
 
-    public Customer(String phone, String firstName, String lastName, String street, String city) {
+    public Customer() {
+    }
+
+    public Customer(
+            String phone, String firstName, String lastName, String street, String city
+    ) {
         this.phone = phone;
         this.firstName = firstName;
         this.lastName = lastName;
         this.street = street;
         this.city = city;
-    }
-
-    public Customer() {
     }
 
     @Id
@@ -38,7 +43,7 @@ public class Customer {
     }
 
     @Basic
-    @Column(name = "firstName", nullable = false, length = 20)
+    @Column(name = "first_name", nullable = false, length = 20)
     public String getFirstName() {
         return firstName;
     }
@@ -48,7 +53,7 @@ public class Customer {
     }
 
     @Basic
-    @Column(name = "lastName", nullable = false, length = 20)
+    @Column(name = "last_name", nullable = false, length = 20)
     public String getLastName() {
         return lastName;
     }
@@ -100,5 +105,14 @@ public class Customer {
                 ", street='" + street + '\'' +
                 ", city='" + city + '\'' +
                 '}';
+    }
+
+    @OneToMany(mappedBy = "customersByPhone")
+    public Collection<Order> getOrdersByPhone() {
+        return ordersByPhone;
+    }
+
+    public void setOrdersByPhone(Collection<Order> ordersByPhone) {
+        this.ordersByPhone = ordersByPhone;
     }
 }
