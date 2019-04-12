@@ -22,9 +22,8 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(
-            String phone, String firstName, String lastName, String street, String city
-    ) {
+    public Customer(String phone, String firstName, String lastName,
+            String street, String city) {
         this.phone = phone;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -83,8 +82,10 @@ public class Customer {
     }
 
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         var customer = (Customer) o;
         return Objects.equals(phone, customer.phone) &&
                 Objects.equals(firstName, customer.firstName) &&

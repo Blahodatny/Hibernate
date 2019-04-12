@@ -63,8 +63,10 @@ public class Order {
     }
 
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         var order = (Order) o;
         return Objects.equals(id, order.id) &&
                 Objects.equals(toStreet, order.toStreet) &&
@@ -95,7 +97,8 @@ public class Order {
     }
 
     @ManyToOne
-    @JoinColumn(name = "phone", referencedColumnName = "phone", nullable = false)
+    @JoinColumn(name = "phone", referencedColumnName = "phone",
+            nullable = false)
     public Customer getCustomersByPhone() {
         return customersByPhone;
     }

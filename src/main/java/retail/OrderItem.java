@@ -38,8 +38,10 @@ public class OrderItem {
     }
 
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         var orderItem = (OrderItem) o;
         return Objects.equals(id, orderItem.id) &&
                 quantity == orderItem.quantity;
@@ -58,7 +60,8 @@ public class OrderItem {
     }
 
     @ManyToOne
-    @JoinColumn(name = "order_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "order_id", referencedColumnName = "id",
+            nullable = false)
     public Order getOrderByOrderId() {
         return orderByOrderId;
     }
@@ -68,7 +71,8 @@ public class OrderItem {
     }
 
     @ManyToOne
-    @JoinColumn(name = "product_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "product_id", referencedColumnName = "id",
+            nullable = false)
     public Product getProductByProductId() {
         return productByProductId;
     }
