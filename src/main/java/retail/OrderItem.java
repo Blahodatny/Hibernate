@@ -19,23 +19,15 @@ public class OrderItem {
 
     @Id
     @Column(name = "id", nullable = false)
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public void setId(Long id) { this.id = id; }
 
     @Basic
     @Column(name = "quantity", nullable = false)
-    public int getQuantity() {
-        return quantity;
-    }
+    public int getQuantity() { return quantity; }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+    public void setQuantity(int quantity) { this.quantity = quantity; }
 
     public boolean equals(Object o) {
         if (this == o)
@@ -47,9 +39,7 @@ public class OrderItem {
                 quantity == orderItem.quantity;
     }
 
-    public int hashCode() {
-        return Objects.hash(id, quantity);
-    }
+    public int hashCode() { return Objects.hash(id, quantity); }
 
     public String toString() {
         return "OrderItem{" +
@@ -62,9 +52,7 @@ public class OrderItem {
     @ManyToOne
     @JoinColumn(name = "order_id", referencedColumnName = "id",
             nullable = false)
-    public Order getOrderByOrderId() {
-        return orderByOrderId;
-    }
+    public Order getOrderByOrderId() { return orderByOrderId; }
 
     public void setOrderByOrderId(Order orderByOrderId) {
         this.orderByOrderId = orderByOrderId;
@@ -73,9 +61,7 @@ public class OrderItem {
     @ManyToOne
     @JoinColumn(name = "product_id", referencedColumnName = "id",
             nullable = false)
-    public Product getProductByProductId() {
-        return productByProductId;
-    }
+    public Product getProductByProductId() { return productByProductId; }
 
     public void setProductByProductId(Product productByProductId) {
         this.productByProductId = productByProductId;

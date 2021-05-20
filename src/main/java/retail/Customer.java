@@ -19,8 +19,7 @@ public class Customer {
     private String city;
     private Collection<Order> ordersByPhone;
 
-    public Customer() {
-    }
+    public Customer() { }
 
     public Customer(String phone, String firstName, String lastName,
             String street, String city) {
@@ -33,53 +32,33 @@ public class Customer {
 
     @Id
     @Column(name = "phone", nullable = false, length = 20)
-    public String getPhone() {
-        return phone;
-    }
+    public String getPhone() { return phone; }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+    public void setPhone(String phone) { this.phone = phone; }
 
     @Basic
     @Column(name = "first_name", nullable = false, length = 20)
-    public String getFirstName() {
-        return firstName;
-    }
+    public String getFirstName() { return firstName; }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    public void setFirstName(String firstName) { this.firstName = firstName; }
 
     @Basic
     @Column(name = "last_name", nullable = false, length = 20)
-    public String getLastName() {
-        return lastName;
-    }
+    public String getLastName() { return lastName; }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    public void setLastName(String lastName) { this.lastName = lastName; }
 
     @Basic
     @Column(name = "street", length = -1)
-    public String getStreet() {
-        return street;
-    }
+    public String getStreet() { return street; }
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
+    public void setStreet(String street) { this.street = street; }
 
     @Basic
     @Column(name = "city", nullable = false, length = -1)
-    public String getCity() {
-        return city;
-    }
+    public String getCity() { return city; }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+    public void setCity(String city) { this.city = city; }
 
     public boolean equals(Object o) {
         if (this == o)
@@ -109,9 +88,7 @@ public class Customer {
     }
 
     @OneToMany(mappedBy = "customersByPhone")
-    public Collection<Order> getOrdersByPhone() {
-        return ordersByPhone;
-    }
+    public Collection<Order> getOrdersByPhone() { return ordersByPhone; }
 
     public void setOrdersByPhone(Collection<Order> ordersByPhone) {
         this.ordersByPhone = ordersByPhone;

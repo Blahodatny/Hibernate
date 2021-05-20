@@ -19,29 +19,19 @@ public class Product {
 
     @Id
     @Column(name = "id", nullable = false, length = 20)
-    public String getId() {
-        return id;
-    }
+    public String getId() { return id; }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    public void setId(String id) { this.id = id; }
 
     @Basic
     @Column(name = "type", nullable = false, length = -1)
-    public String getType() {
-        return type;
-    }
+    public String getType() { return type; }
 
-    public void setType(String type) {
-        this.type = type;
-    }
+    public void setType(String type) { this.type = type; }
 
     @Basic
     @Column(name = "second_hand", nullable = false)
-    public boolean isSecondHand() {
-        return secondHand;
-    }
+    public boolean isSecondHand() { return secondHand; }
 
     public void setSecondHand(boolean secondHand) {
         this.secondHand = secondHand;
@@ -58,9 +48,7 @@ public class Product {
                 Objects.equals(type, product.type);
     }
 
-    public int hashCode() {
-        return Objects.hash(id, type, secondHand);
-    }
+    public int hashCode() { return Objects.hash(id, type, secondHand); }
 
     public String toString() {
         return "Product{" +
@@ -71,9 +59,7 @@ public class Product {
     }
 
     @OneToMany(mappedBy = "productByProductId")
-    public Collection<OrderItem> getOrderItemsById() {
-        return orderItemsById;
-    }
+    public Collection<OrderItem> getOrderItemsById() { return orderItemsById; }
 
     public void setOrderItemsById(Collection<OrderItem> orderItemsById) {
         this.orderItemsById = orderItemsById;

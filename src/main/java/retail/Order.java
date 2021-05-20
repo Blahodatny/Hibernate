@@ -24,43 +24,27 @@ public class Order {
 
     @Id
     @Column(name = "id", nullable = false)
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public void setId(Long id) { this.id = id; }
 
     @Basic
     @Column(name = "to_street", nullable = false, length = -1)
-    public String getToStreet() {
-        return toStreet;
-    }
+    public String getToStreet() { return toStreet; }
 
-    public void setToStreet(String toStreet) {
-        this.toStreet = toStreet;
-    }
+    public void setToStreet(String toStreet) { this.toStreet = toStreet; }
 
     @Basic
     @Column(name = "to_city", nullable = false, length = -1)
-    public String getToCity() {
-        return toCity;
-    }
+    public String getToCity() { return toCity; }
 
-    public void setToCity(String toCity) {
-        this.toCity = toCity;
-    }
+    public void setToCity(String toCity) { this.toCity = toCity; }
 
     @Basic
     @Column(name = "ship_date", nullable = false)
-    public Timestamp getShipDate() {
-        return shipDate;
-    }
+    public Timestamp getShipDate() { return shipDate; }
 
-    public void setShipDate(Timestamp shipDate) {
-        this.shipDate = shipDate;
-    }
+    public void setShipDate(Timestamp shipDate) { this.shipDate = shipDate; }
 
     public boolean equals(Object o) {
         if (this == o)
@@ -88,9 +72,7 @@ public class Order {
     }
 
     @OneToMany(mappedBy = "orderByOrderId")
-    public Collection<OrderItem> getOrderItemsById() {
-        return orderItemsById;
-    }
+    public Collection<OrderItem> getOrderItemsById() { return orderItemsById; }
 
     public void setOrderItemsById(Collection<OrderItem> orderItemsById) {
         this.orderItemsById = orderItemsById;
@@ -99,9 +81,7 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "phone", referencedColumnName = "phone",
             nullable = false)
-    public Customer getCustomersByPhone() {
-        return customersByPhone;
-    }
+    public Customer getCustomersByPhone() { return customersByPhone; }
 
     public void setCustomersByPhone(Customer customersByPhone) {
         this.customersByPhone = customersByPhone;
